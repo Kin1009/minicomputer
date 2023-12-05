@@ -2,12 +2,19 @@
  This project is inspired from the game Turing Complete, level Calculations, but it's buffed.
 # Help
 I'm lazy, so I'm going to explain in short python code.
+
 imm [comment] -> #comment
+
 cin [reg] [val] -> regs[reg] = val
+
 cun [reg] -> regs[reg] = input()
+
 out [reg] -> print(regs[reg])
+
 cpy [reg] [dist] -> regs[dist] = regs[reg]
+
 mth [opr] ->
+
     regA = regs[0]
     regB = regs[1]
     match opr:
@@ -24,6 +31,7 @@ mth [opr] ->
         case 5:
             regs[3] = (regA ** (1 / regB)) % 256 #root   
 log [opr] ->
+
     regA = regs[0]
     regB = regs[1]
     match opr:
@@ -42,6 +50,7 @@ log [opr] ->
         case 6:
             regs[3] = (~(regA ^ regB)) % 256    
 cnd [opr] [cmd] ->
+
     regA = regs[0]
     regB = regs[1]
     res = False
@@ -61,13 +70,21 @@ cnd [opr] [cmd] ->
     if res:
         parse(cmd)
 prg: start writing program
+
 rst: reset program
+
 run: run program, can be used multiple times in a row
+
 hlp: show help
+
 clr: clear screen (windows only)
+
 ext: exit
-or you could read my documentation.
+
+Or you could read my documentation.
 # Files
 app.py: The full kernel.
+
 asm.py: The ASM version of the parser.
+
 binary.py: The core version, only supports binary (1s and 0s type)
